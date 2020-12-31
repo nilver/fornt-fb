@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Create a docker image
+
+1. Open a terminal and type next command: `git clone https://github.com/nilver/fornt-fb.git`
+2. In the root folder Run `ng build --prod` . his will result in creation of a new folder called dist/front-fb in which all compiled files are put. This is for compile the app. Previously, you should install Angular CLI.
+3. Run `docker build -t front-fb .`
+4. Run `docker image ls`. You should get a column with name : front-fb.
