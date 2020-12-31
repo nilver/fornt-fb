@@ -30,6 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 1. Open a terminal and type next command: `git clone https://github.com/nilver/fornt-fb.git`
 2. Run `cd fornt-fb/`
-3. Run `ng build --prod` . This will result in creation of a new folder called dist/front-fb in which all compiled files are put. This is for compile the app. Previously, you should install Angular CLI.
+3. Run `npm install` This is for get all dependencies. I'm using version,  npm: '6.14.6'
+4. Run `ng build --prod` . This will result in creation of a new folder called dist/front-fb in which all compiled files are put. This is for compile the app. Previously, you should install Angular CLI.
 4. Run `docker build -t front-fb .`
 5. Run `docker image ls`. You should get a column with name : front-fb.
