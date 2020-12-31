@@ -1,0 +1,20 @@
+<div class="col-md-6 user-container">
+    <h2 class="text-center">Generate Fibonacci</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="value">Number:</label>
+        <input type="number" formControlName="value" placeholder="Add a number" name="value" class="form-control" id="value" max="7">
+      </div>
+
+      <div class="form-group" *ngIf=show>
+        <label for="num">Fibonacci:</label>
+        <input type="num"   placeholder={{result}} name="num" class="form-control" id="num" readonly>
+      </div>
+      <div>
+        <button class="btn btn-success" [disabled]="hideButton||!addForm.valid">Generate</button>
+        <button class="btn btn-success" style="margin-left: 20px;" (click)="go()">History</button>
+        
+      </div>
+      
+    </form>
+  </div>

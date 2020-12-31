@@ -1,0 +1,16 @@
+  
+.user-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  
+}
+
+table { 
+  table-layout:fixed; 
+  width:100%; 
+} 
+.tdf { 
+   
+  overflow-wrap:break-word;/* optionnal*/ 
+} 
