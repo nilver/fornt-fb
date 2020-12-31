@@ -1,14 +1,11 @@
-FROM node:13.3.0 AS compile-image
-
-RUN npm install -g yarn
-
+### STAGE 1: Build ###
+FROM node:12.7-alpine AS build
+WORKDIR /usr/src/app
+COPY package.json package-lock.json ./
 RUN npm install
-
-ENV PATH="./node_modules/.bin:$PATH" 
-
-COPY . ./
-RUN ng build --prod
-
-FROM nginx
-COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=compile-image /opt/ng/dist/front-fb /usr/share/nginx/html
+COPY . .
+RUN npm run build
+### STAGE 2: Run ###
+FROM nginx:1.17.1-alpine
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /usr/src/app/dist/front-fb /usr/share/nginx/html
