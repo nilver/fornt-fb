@@ -1,4 +1,17 @@
-# FrontFb
+# FrontFb. My docker version is
+Client: Docker Engine - Community
+ Version:           19.03.12
+ API version:       1.40
+ Go version:        go1.13.10
+ Git commit:        48a66213fe
+ Built:             Mon Jun 22 15:43:18 2020
+ OS/Arch:           windows/amd64
+ Experimental:      false
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          19.03.12
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
